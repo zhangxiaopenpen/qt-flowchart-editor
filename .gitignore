@@ -1,0 +1,7 @@
+﻿.helloagents/
+.vscode/
+build/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+*.user
