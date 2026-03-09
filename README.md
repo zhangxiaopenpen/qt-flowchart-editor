@@ -135,22 +135,6 @@
 - **导出 SVG**：手工拼接 SVG 文本并输出。
 - **导出 PNG**：直接使用 `canvasWidget->render()` 渲染为位图。
 
-## 交互流程概览
-
-```mermaid
-flowchart TD
-    A[选择左侧图形工具] --> B[在画布中创建图形]
-    B --> C[图元写入 shapes 列表]
-    C --> D[paintEvent 统一重绘]
-    D --> E[选中图形]
-    E --> F[移动 / 缩放 / 旋转 / 改样式]
-    E --> G[双击进入文本编辑]
-    E --> H[连接箭头]
-    F --> C
-    G --> C
-    H --> C
-    C --> I[导出 PNG / SVG 或保存 .flow]
-```
 
 ## 项目结构
 
@@ -216,3 +200,4 @@ cmake --build build --config Release
 ### 当前限制
 
 - `mainwindow.cpp` 体量较大，绘制、交互、导入导出逻辑高度集中，后续可继续模块化拆分。
+
